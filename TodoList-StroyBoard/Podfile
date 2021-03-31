@@ -6,5 +6,6 @@ target 'TodoList-StroyBoard' do
   use_frameworks!
 
   # Pods for TodoList-StroyBoard
+  pod 'Then'
 
 end

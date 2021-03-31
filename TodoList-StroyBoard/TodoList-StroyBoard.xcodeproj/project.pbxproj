@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		1DB34D732613180B0003BE60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB34D712613180B0003BE60 /* Main.storyboard */; };
 		1DB34D752613180C0003BE60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DB34D742613180C0003BE60 /* Assets.xcassets */; };
 		1DB34D782613180C0003BE60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB34D762613180C0003BE60 /* LaunchScreen.storyboard */; };
+		48A7E9C0ECB66682604446CA /* Pods_TodoList_StroyBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C41DFA209A5E13795C3C7C /* Pods_TodoList_StroyBoard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		1DB34D742613180C0003BE60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DB34D772613180C0003BE60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DB34D792613180C0003BE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7C41DFA209A5E13795C3C7C /* Pods_TodoList_StroyBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoList_StroyBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C239C96962BB1067182DBED1 /* Pods-TodoList-StroyBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList-StroyBoard.debug.xcconfig"; path = "Target Support Files/Pods-TodoList-StroyBoard/Pods-TodoList-StroyBoard.debug.xcconfig"; sourceTree = "<group>"; };
+		FFC22A57CA3C6339C16E6F0A /* Pods-TodoList-StroyBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList-StroyBoard.release.xcconfig"; path = "Target Support Files/Pods-TodoList-StroyBoard/Pods-TodoList-StroyBoard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A7E9C0ECB66682604446CA /* Pods_TodoList_StroyBoard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F7359F652A65E9C401ACD21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7C41DFA209A5E13795C3C7C /* Pods_TodoList_StroyBoard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1DB34D5F2613180B0003BE60 = {
 			isa = PBXGroup;
 			children = (
 				1DB34D6A2613180B0003BE60 /* TodoList-StroyBoard */,
 				1DB34D692613180B0003BE60 /* Products */,
+				74116B5F10D427ECBF495FC2 /* Pods */,
+				0F7359F652A65E9C401ACD21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,15 @@
 			path = "TodoList-StroyBoard";
 			sourceTree = "<group>";
 		};
+		74116B5F10D427ECBF495FC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C239C96962BB1067182DBED1 /* Pods-TodoList-StroyBoard.debug.xcconfig */,
+				FFC22A57CA3C6339C16E6F0A /* Pods-TodoList-StroyBoard.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DB34D7C2613180C0003BE60 /* Build configuration list for PBXNativeTarget "TodoList-StroyBoard" */;
 			buildPhases = (
+				A1C69A2DBD621CB5602B110F /* [CP] Check Pods Manifest.lock */,
 				1DB34D642613180B0003BE60 /* Sources */,
 				1DB34D652613180B0003BE60 /* Frameworks */,
 				1DB34D662613180B0003BE60 /* Resources */,
+				F2238417132B872AE2A7B7E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1C69A2DBD621CB5602B110F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodoList-StroyBoard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2238417132B872AE2A7B7E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodoList-StroyBoard/Pods-TodoList-StroyBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodoList-StroyBoard/Pods-TodoList-StroyBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoList-StroyBoard/Pods-TodoList-StroyBoard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DB34D642613180B0003BE60 /* Sources */ = {
@@ -283,6 +351,7 @@
 		};
 		1DB34D7D2613180C0003BE60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C239C96962BB1067182DBED1 /* Pods-TodoList-StroyBoard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +370,7 @@
 		};
 		1DB34D7E2613180C0003BE60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFC22A57CA3C6339C16E6F0A /* Pods-TodoList-StroyBoard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
