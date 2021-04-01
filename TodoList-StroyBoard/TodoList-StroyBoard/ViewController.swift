@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let viewModel = DateViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,7 +20,7 @@ class ViewController: UIViewController {
 
 extension ViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return viewModel.numOfTodo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -26,8 +28,8 @@ extension ViewController : UICollectionViewDataSource, UICollectionViewDelegateF
             return UICollectionViewCell()
         }
         
-        cell.dayLabel.text = "Mon"
-        cell.dateLabel.text = "11"
+        let todoInfo = viewModel.todoInfo(at: indexPath.item)
+        cell.update(info: todoInfo)
         cell.layer.cornerRadius = 15.0
         return cell
     }
@@ -44,10 +46,33 @@ extension ViewController : UICollectionViewDataSource, UICollectionViewDelegateF
     
 }
 
+class DateViewModel {
+    let todoList: [Todo] = [
+        Todo(day: "Mon", date: "11"),
+        Todo(day: "Tue", date: "12"),
+        Todo(day: "Wen", date: "13"),
+        Todo(day: "Thd", date: "14")
+    ]
+    
+    var numOfTodo: Int{
+        return todoList.count
+    }
+    
+    func todoInfo(at index: Int) -> Todo{
+        return todoList[index]
+    }
+}
+
 class DateClass: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     
+    
+    func update(info: Todo){
+        dateLabel.text = info.date
+        dayLabel.text = info.day
+        
+    }
 }
 
 
